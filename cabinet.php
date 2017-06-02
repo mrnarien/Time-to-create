@@ -22,7 +22,6 @@
                      <? 
                         if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
                         {
-                        session_start();
                         echo '<div id="str_basket" style="font-size:24px;">
                         <p><b>Выбрать новость дня:</b>';
                         
