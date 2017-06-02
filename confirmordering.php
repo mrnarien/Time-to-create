@@ -8,7 +8,7 @@ if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
         file_put_contents('files/ordersitems.txt', '<tr><td>' . $_SESSION['item' . $i] . '</td><td>' . $_SESSION['item_name' . $i] . '</td><td>' . $_SESSION['quantity' . $i] . '</td><td>' . $_SESSION['price' . $i] * $_SESSION['quantity' . $i] . ' руб.</td></tr><br>', FILE_APPEND);
     }
     file_put_contents('files/ordersitems.txt', '<tr><td style="background:#e6e6fa;"><b>Итого к оплате: </b></td><td style="background:#e6e6fa; text-align: right; padding-right:40px;" colspan="4"><b>' . $sum . ' руб.</b></td></tr>' . "\n", FILE_APPEND);
-    $login       = !empty($_SESSION['login']) ? htmlspecialchars($_SESSION['login']) : '';
+    $login       = !empty($_SESSION['login']) ? $_SESSION['login'] : '';
     $fullname    = !empty($_GET['fullname'])) ? htmlspecialchars($_GET['fullname'])) : '';
     $phonenumber = !empty($_GET['phonenumber']) ? htmlspecialchars($_GET['phonenumber'] : '';
     $email       = !empty($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
