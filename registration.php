@@ -33,6 +33,10 @@
                         <p align="center"><input type="submit" value="Зарегистрироваться"></p>
                      </form>
                      <?php
+			$_SESSION['login_too_short']=false;
+			$_SESSION['login_already_exist']=false;
+			$_SESSION['passwords_not_the_same']=false;
+			$_SESSION['password_too_short']=false;
                         if ($_SESSION['login_too_short']==true)
                         {
                         	echo '<p align="center">Логин слишком<br>короткий.</p>';
