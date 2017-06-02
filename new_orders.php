@@ -34,21 +34,19 @@
                         $items=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
                         for ($i=0; $i<count($items); $i++)
                         {
-                        	echo '
-                        	Логин: ', $logins[$i], '<br>
-                        	Ф.И.О.: ', $fullnames[$i], '<br>
-                        	Тел. номер: ', $phonenumbers[$i], '<br>
-                        	E-mail: ', $emails[$i], '<br>
-                        	Адрес: ', $addresses[$i], '<br>
-                        	Дата желаемого получения: ', $dates[$i], '<br>
-                        	<br>
-                        	
-                        	<br>
+                        	echo '<table><tr><th>Данные</th><th>Значение</th></tr>
+                        	<tr><td>Логин: </td><td>', $logins[$i], '</td></tr>
+                        	<tr><td>Ф.И.О.: </td><td>', $fullnames[$i], '</td></tr>
+                        	<tr><td>Тел. номер: </td><td>', $phonenumbers[$i], '</td></tr>
+                        	<tr><td>E-mail: </td><td>', $emails[$i], '</td></tr>
+                        	<tr><td>Адрес: </td><td>', $addresses[$i], '</td></tr>
+                        	<tr><td>Дата желаемого получения: </td><td>', $dates[$i], '</td></tr>
+                        	</table>
                         	<table><tr style="matgin-bottom:0px;"><th>Артикул</th><th>Наименование</th><th>Количество</th><th>Сумма к оплате</th></tr>
                         	',$items[$i],'
                         	</table>
                         	<br>
-                        	<hr>
+                        	<hr noshade size="10">
                         	<br>
                         	<br>
                         	';
