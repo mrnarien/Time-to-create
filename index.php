@@ -42,8 +42,8 @@
                         <br>
                         <p align="center">',$productnames[$i],'</p>
                         <br>
-                        <p align="center">',$productprices[$i],' руб.</p>
-                        <p align="center">Артикул: ',$productarticles[$i],'</p>';
+                        <p align="center">Артикул: ',$productarticles[$i],'</p>
+                        <p align="center">',$productprices[$i],' руб.</p>';
                         
                         
                         if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
