@@ -14,7 +14,7 @@
    <body>
       <div class="main-block">
          <div class="container paper">
-            <?require '/header.php';?>
+            <?require 'header.php';?>
             <div id="main">
                <div id="catalog">
                   <h2 class="post_ttl">КОРЗИНА ТОВАРОВ</h2>
@@ -101,6 +101,6 @@
             <div class="clear-both"></div>
          </div>
       </div>
-      <?require '/footer.php';?>
+      <?require 'footer.php';?>
    </body>
 </html>
