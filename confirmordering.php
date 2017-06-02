@@ -9,8 +9,8 @@ if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
     }
     file_put_contents('files/ordersitems.txt', '<tr><td style="background:#e6e6fa;"><b>Итого к оплате: </b></td><td style="background:#e6e6fa; text-align: right; padding-right:40px;" colspan="4"><b>' . $sum . ' руб.</b></td></tr>' . "\n", FILE_APPEND);
     $login       = !empty($_SESSION['login']) ? $_SESSION['login'] : '';
-    $fullname    = !empty($_GET['fullname'])) ? htmlspecialchars($_GET['fullname'])) : '';
-    $phonenumber = !empty($_GET['phonenumber']) ? htmlspecialchars($_GET['phonenumber'] : '';
+    $fullname    = !empty($_GET['fullname']) ? htmlspecialchars($_GET['fullname']) : '';
+    $phonenumber = !empty($_GET['phonenumber']) ? htmlspecialchars($_GET['phonenumber']) : '';
     $email       = !empty($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
     $address     = !empty($_GET['address']) ? htmlspecialchars($_GET['address']) : '';
     $date        = !empty($_GET['date']) ? htmlspecialchars($_GET['date']) : '';
