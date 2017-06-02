@@ -74,10 +74,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .header_info
 {
 	float: left;
-	height: 25%;
-	margin: 2%;
-	position: relative;
-	width: 25%;
+    	height: 10%;
+    	margin: 2% 0 0 5%;
+    	position: relative;
+    	width: 25%;
 }
 .float-right
 {
@@ -126,10 +126,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	color: #00cc00;
 	display: block;
 	float: left;
-	font-size: 20px;
-	height: 25%;
-	position: relative;
-	width: 40%;
+    	font-size: 20px;
+    	height: 25%;
+    	position: relative;
+    	margin: 1% 0 0 23%;
+    	width: 80%;
 }
 .reg p
 {
