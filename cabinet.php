@@ -29,7 +29,7 @@
                         
                         echo '<form action="add_daynews.php" method="POST" >
                         <select name="daynews">
-                        <option selected value="default">Выбрать</option>';
+                        <option selected value="Мы всегда рады видеть вас в нашем магазине!">Выбрать</option>';
                         for ($i=0; $i<count($daynews); $i++)
                         	{
                         		echo '<option VALUE="', $daynews[$i] ,'">', $daynews[$i] ,'</option>';
