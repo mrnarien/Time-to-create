@@ -14,7 +14,7 @@
    <body>
       <div class="main-block">
          <div class="container paper">
-            <?include '/header.php';?>
+            <?require '/header.php';?>
             <div id="main">
                <div id="catalog">
                   <h2 class="post_ttl">КОРЗИНА ТОВАРОВ</h2>

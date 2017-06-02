@@ -14,7 +14,7 @@
    <body>
       <div class="main-block">
          <div class="container paper">
-            <?include '/header.php';?>
+            <?require '/header.php';?>
             <div id="main">
                <div id="catalog">
                   <h2 class="post_ttl">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
@@ -70,7 +70,7 @@
             <div class="clear-both"></div>
          </div>
       </div>
-      <?include '/footer.php';?>
+      <?require '/footer.php';?>
       </div>
    </body>
 </html>

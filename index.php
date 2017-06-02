@@ -14,7 +14,7 @@
    <body>
       <div class="main-block">
          <div class="container paper">
-            <?include '/header.php';?>
+            <?require '/header.php';?>
             <div id="page">
                <div id="main">
                   <div id="catalog">
@@ -103,6 +103,6 @@
             <div class="clear-both"></div>
          </div>
       </div>
-      <?include '/footer.php';?>
+      <?require '/footer.php';?>
    </body>
 </html>
