@@ -1,7 +1,6 @@
 <?php
 session_start();
 $login     = htmlspecialchars($_POST['login']);
-$email     = htmlspecialchars($_POST['email']);
 $password1 = htmlspecialchars($_POST['password1']);
 $password2 = htmlspecialchars($_POST['password2']);
 $logins    = file('files/logins.txt', FILE_IGNORE_NEW_LINES);
@@ -28,7 +27,6 @@ if (strlen($password1) < 8) {
     exit;
 }
 file_put_contents('files/logins.txt', $login . "\n", FILE_APPEND);
-file_put_contents('files/emails.txt', $email . "\n", FILE_APPEND);
 file_put_contents('files/passwords.txt', $password1 . "\n", FILE_APPEND);
 $_SESSION['login'] = $login;
 echo '<script>location.href="index.php"</script>';
