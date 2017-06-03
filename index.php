@@ -71,21 +71,26 @@ if (isset($_SESSION['basketcounter']) == false) {
                          echo '</div>';
                      }
                       if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
-                            echo '<div id="addprod">
-                                                <h2 class="post_ttl2">Добавление товаров</h2>
-                                                <form method="post" enctype="multipart/form-data" action=addproduct.php>
-
-                                                <p style="margin-top:2%;">Артикул:<br>
-                                                <input type="text" size="40" name="productarticle" required></p>
-                                                <p>Название:<br>
-                                                <input type="text" size="40" name="productname" required></p>
-                                                <p>Цена:<br>
-                                                <input type="text" name="productprice" required></p>
-                                                <p>Картинка (рекоменд. размер - 200x200px):<br>
-                                                <input type="file" name="productimg" required></p>
-                                                <input type="submit" value="Добавить товар">
-                                                </form>
-                                                </div>';
+                           echo '
+                            <div id="addprod">
+                               <h2 class="post_ttl2">Добавление товаров</h2>
+                               <form method="post" enctype="multipart/form-data" action=addproduct.php>
+                                  <p style="margin-top:2%;">Артикул:<br>
+                                     <input type="text" size="40" name="productarticle" required>
+                                  </p>
+                                  <p>Название:<br>
+                                     <input type="text" size="40" name="productname" required>
+                                  </p>
+                                  <p>Цена:<br>
+                                     <input type="text" name="productprice" required>
+                                  </p>
+                                  <p>Картинка (рекоменд. размер - 200x200px):<br>
+                                     <input type="file" name="productimg" required>
+                                  </p>
+                                  <input type="submit" value="Добавить товар">
+                               </form>
+                            </div>
+                            ';
                         }
                         ?>
                   </div>
