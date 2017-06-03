@@ -1,4 +1,4 @@
-﻿<? session_start();
+<? session_start();
    if (isset($_SESSION['basketcounter'])==false)
    {
    	$_SESSION['basketcounter']=0;
