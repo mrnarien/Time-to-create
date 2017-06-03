@@ -14,7 +14,6 @@
 						$passwords = file('files/passwords.txt', FILE_IGNORE_NEW_LINES);
 						for ($i = 0; $i < count($logins); $i++) {
 							if ($login == $logins[$i] && $password == $passwords[$i]) {
-								session_start();
 								$_SESSION['login'] = $login;
 								if ($_SESSION['login'] == 'daniil' && $password == '12344321') {
 									$_SESSION['adminmode'] = 'activated';
