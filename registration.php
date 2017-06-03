@@ -22,21 +22,19 @@
                      <form method="post" action="register.php">
                         <p>Логин<br>(не менее 6 символов):</p>
                         <input type="text" name="login" required>
-                        <p>E-mail:</p>
-                        <input type="text" name="email" required>
                         <p>Пароль<br>(не менее 8 символов):</p>
                         <input type="password" name="password1" required>
                         <p>Повторите пароль:</p>
                         <input type="password" name="password2" required>
                         <br>
                         <br>
-                        <p align="center"><input type="submit" value="Зарегистрироваться"></p>
+                        <p align="center"><input style="height: 50px; width: 250px; font-size: 22px; cursor:pointer;" type="submit" value="Зарегистрироваться"></p>
                      </form>
                      <?php
-			$_SESSION['login_too_short']=false;
-			$_SESSION['login_already_exist']=false;
-			$_SESSION['passwords_not_the_same']=false;
-			$_SESSION['password_too_short']=false;
+						$_SESSION['login_too_short']=false;
+			            $_SESSION['login_already_exist']=false;
+			            $_SESSION['passwords_not_the_same']=false;
+			            $_SESSION['password_too_short']=false;
                         if ($_SESSION['login_too_short']==true)
                         {
                         	echo '<p align="center">Логин слишком<br>короткий.</p>';
