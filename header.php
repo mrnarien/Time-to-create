@@ -1,21 +1,21 @@
 <?php header("Content-Type: text/html; charset=utf-8");?>
 <div id="header">
    <div class="daynews">
-      <?		
-         $daynews=file('files/daynews.txt', FILE_IGNORE_NEW_LINES);
-         for ($i=0; $i<count($daynews); $i++)
-         		{
-         			echo $daynews[$i];
-         		}
-         
-         		
+      <?
+         $daynews = file('files/daynews.txt', FILE_IGNORE_NEW_LINES);
+         for ($i = 0; $i < count($daynews); $i++) {
+             echo $daynews[$i];
+         }
+
+
          ?>
    </div>
    <div class="logo">
       <a href="index.php"><img src="images/logotip.png"></a>
    </div>
    <div id="basket" class="float-right">
-      <?php if (isset($_SESSION['login']))
+      <?php 
+         if (isset($_SESSION['login']))
          {
          if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
          {
@@ -47,7 +47,6 @@
    <div class="reg">
       <?php
          if (isset($_SESSION['login'])) {
-
              if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
                  echo '<p>Здравствуйте, ', $_SESSION['login'], ' | Статус: администратор </p>
                               <p><a href="exit.php">Выйти</a> | <a href="cabinet.php">Управление сайтом </a> </p>';
