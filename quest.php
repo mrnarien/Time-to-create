@@ -29,19 +29,19 @@
                         <p><input type="submit" value="Отправить"></p>
                      </form>
                   </div>
-                  <?	$names=file('files/quest_name.txt', FILE_IGNORE_NEW_LINES);
-                     $mails=file('files/quest_text.txt', FILE_IGNORE_NEW_LINES);
-                     $mails_dates=file('files/quest_date.txt', FILE_IGNORE_NEW_LINES);
-                     $mails_times=file('files/quest_time.txt', FILE_IGNORE_NEW_LINES);
-                     for ($i=0; $i<count($names); $i++)
-                     {
-                     	echo '<div id="addmail">
-                     <p><b>',$names[$i],' (',$mails_dates[$i],' ',$mails_times[$i],')</b></p>
-                     <p>',$mails[$i],'</p>
-                     </div>';
-                     }
-                     
-                     ?>
+                  <?
+                  $names       = file('files/quest_name.txt', FILE_IGNORE_NEW_LINES);
+                  $mails       = file('files/quest_text.txt', FILE_IGNORE_NEW_LINES);
+                  $mails_dates = file('files/quest_date.txt', FILE_IGNORE_NEW_LINES);
+                  $mails_times = file('files/quest_time.txt', FILE_IGNORE_NEW_LINES);
+                  for ($i = 0; $i < count($names); $i++) {
+                      echo '<div id="addmail">
+                                       <p><b>', $names[$i], ' (', $mails_dates[$i], ' ', $mails_times[$i], ')</b></p>
+                                       <p>', $mails[$i], '</p>
+                                       </div>';
+                  }
+
+                  ?>
                </div>
             </div>
             <div class="clear-both"></div>
