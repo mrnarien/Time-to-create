@@ -45,28 +45,27 @@
       </span>
    </div>
    <div class="reg">
-      <?php if (isset($_SESSION['login']))
-         {
-         
-         	 if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
-         		{
-         			echo '<p>Здравствуйте, ', $_SESSION['login'], ' | Статус: администратор </p>
-         			<p><a href="exit.php">Выйти</a> | <a href="cabinet.php">Управление сайтом </a> </p>';
-         		}
-         		else {
-         			echo '<p>Здравствуйте, ', $_SESSION['login'], ' | Статус: пользователь</p><p><a href="exit.php">Выйти</a></p>'; 
-         			}
+      <?php
+         if (isset($_SESSION['login'])) {
+
+             if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
+                 echo '<p>Здравствуйте, ', $_SESSION['login'], ' | Статус: администратор </p>
+                              <p><a href="exit.php">Выйти</a> | <a href="cabinet.php">Управление сайтом </a> </p>';
+             } else {
+                 echo '<p>Здравствуйте, ', $_SESSION['login'], ' | Статус: пользователь</p><p><a href="exit.php">Выйти</a></p>';
+             }
          }
-         
+
          else
-         echo'
-         Авторизация 
-         <form method="post" action="login.php">
-         <input type="text" placeholder="Логин" name="login" required>
-         <input type="password" placeholder="Пароль" name="password" required>
-         <input type="submit" value="Войти">
-         </form>
-         <a href="registration.php">Зарегистрироваться</a>';?>
+             echo '
+                  Авторизация 
+                  <form method="post" action="login.php">
+                  <input type="text" placeholder="Логин" name="login" required>
+                  <input type="password" placeholder="Пароль" name="password" required>
+                  <input type="submit" value="Войти">
+                  </form>
+                  <a href="registration.php">Зарегистрироваться</a>';
+         ?>
    </div>
    <div class="clear-both"></div>
 </div>
