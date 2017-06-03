@@ -36,16 +36,14 @@ if (isset($_SESSION['basketcounter']) == false) {
                      $productimgs     = file('files/productimgs.txt', FILE_IGNORE_NEW_LINES);
                      $productprices   = file('files/productprices.txt', FILE_IGNORE_NEW_LINES);
                      for ($i = 0; $i < count($productarticles); $i++) {
-                         echo '
-                        		<div id="product">
+                         echo '<div id="product">
                         <img src="products/', $productimgs[$i], '" alt="', $productnames[$i], '">
                         <br>
                         <p align="center">', $productnames[$i], '</p>
                         <br>
                         <p align="center">Артикул: ', $productarticles[$i], '</p>
                         <p align="center">', $productprices[$i], ' руб.</p>';
-    
-    
+                         
                          if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
                              echo '<form action="delproduct.php" method="GET">
                                              <center><input type="submit" value="Удалить товар" name="product', $i, '"/></center>
@@ -72,10 +70,7 @@ if (isset($_SESSION['basketcounter']) == false) {
                          ;
                          echo '</div>';
                      }
-
-
-
-                        if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
+                      if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
                             echo '<div id="addprod">
                                                 <h2 class="post_ttl2">Добавление товаров</h2>
                                                 <form method="post" enctype="multipart/form-data" action=addproduct.php>
