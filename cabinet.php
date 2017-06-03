@@ -17,7 +17,7 @@
             <?require 'header.php';?>
             <div id="main">
                <div id="catalog">
-                <h2 class="post_ttl">ПАНЕЛЬ УПРАВЛЕНИЯ</h2>
+                <h2 class="post_ttl">УПРАВЛЕНИЕ САЙТОМ</h2>
                   <div id="admin_panel">
                      <? 
                         if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
