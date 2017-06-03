@@ -19,15 +19,16 @@
                <div id="catalog">
                   <h2 class="post_ttl">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
                   <div id="str_basket">
-                     <? if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
-                        {
-                        echo header('Location:index.php');
-                        }
-                        else
-                        {?>
+                     <?
+                     if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
+                         echo header('Location:index.php');
+                     } else {
+                     ?>
                      <p><b>Спасибо за заказ!</b></p>
                      <p><b>Мы свяжемся с вами в ближайшее время для окончательного подтверждения заказа.</b></p>
-                     <?}?>
+                     <?
+                     }
+                     ?>
                   </div>
                </div>
             </div>
