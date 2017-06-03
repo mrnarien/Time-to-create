@@ -31,31 +31,27 @@
                         <p align="center"><input style="height: 50px; width: 250px; font-size: 22px; cursor:pointer;" type="submit" value="Зарегистрироваться"></p>
                      </form>
                      <?php
-						$_SESSION['login_too_short']=false;
-			            $_SESSION['login_already_exist']=false;
-			            $_SESSION['passwords_not_the_same']=false;
-			            $_SESSION['password_too_short']=false;
-                        if ($_SESSION['login_too_short']==true)
-                        {
-                        	echo '<p align="center">Логин слишком<br>короткий.</p>';
-                        	$_SESSION['login_too_short']=false;
-                        }
-                        if ($_SESSION['login_already_exist']==true)
-                        {
-                        	echo '<p align="center">Этот логин занят.</p>';
-                        	$_SESSION['login_already_exist']=false;
-                        }
-                        if ($_SESSION['passwords_not_the_same']==true)
-                        {
-                        	echo '<p align="center">Пароли не совпадают.</p>';
-                        	$_SESSION['passwords_not_the_same']=false;
-                        }
-                        if ($_SESSION['password_too_short']==true)
-                        {
-                        	echo '<p align="center">Пароль слишком<br>короткий.</p>';
-                        	$_SESSION['password_too_short']=false;
-                        }
-                        ?>	
+			$_SESSION['login_too_short']        = false;
+			$_SESSION['login_already_exist']    = false;
+			$_SESSION['passwords_not_the_same'] = false;
+			$_SESSION['password_too_short']     = false;
+			if ($_SESSION['login_too_short'] == true) {
+			    echo '<p align="center">Логин слишком<br>короткий.</p>';
+			    $_SESSION['login_too_short'] = false;
+			}
+			if ($_SESSION['login_already_exist'] == true) {
+			    echo '<p align="center">Этот логин занят.</p>';
+			    $_SESSION['login_already_exist'] = false;
+			}
+			if ($_SESSION['passwords_not_the_same'] == true) {
+			    echo '<p align="center">Пароли не совпадают.</p>';
+			    $_SESSION['passwords_not_the_same'] = false;
+			}
+			if ($_SESSION['password_too_short'] == true) {
+			    echo '<p align="center">Пароль слишком<br>короткий.</p>';
+			    $_SESSION['password_too_short'] = false;
+			}
+			?>   	
                   </div>
                </div>
             </div>
