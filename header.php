@@ -6,34 +6,27 @@
          for ($i = 0; $i < count($daynews); $i++) {
              echo $daynews[$i];
          }
-
-
-         ?>
+      ?>
    </div>
    <div class="logo">
       <a href="index.php"><img src="images/logotip.png"></a>
    </div>
    <div id="basket" class="float-right">
-      <?php 
-         if (isset($_SESSION['login']))
-         {
-         if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
-         {
-         $orderscount=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
-         echo '<a href="new_orders.php">  Новые заказы: ', count($orderscount), '</a>
-         ';
-         }
-         else
-         {
-         echo ' <a href="basket.php"> Товаров в корзине: ', $_SESSION['basketcounter'], '</a>
-         <a href="basket.php" id="add2basketButton">В корзину</a>
-         ';
-         }
-         }
-         else
-         echo'<a href="basket.php"> Товаров в корзине: ', $_SESSION['basketcounter'], '</a>
-         <a href="basket.php" id="add2basketButton">В корзину</a>
-         ';
+      <?php
+         if (isset($_SESSION['login'])) {
+             if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
+                 $orderscount = file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
+                 echo '<a href="new_orders.php">  Новые заказы: ', count($orderscount), '</a>
+                  ';
+             } else {
+                 echo ' <a href="basket.php"> Товаров в корзине: ', $_SESSION['basketcounter'], '</a>
+                  <a href="basket.php" id="add2basketButton">В корзину</a>
+                  ';
+             }
+         } else
+             echo '<a href="basket.php"> Товаров в корзине: ', $_SESSION['basketcounter'], '</a>
+                  <a href="basket.php" id="add2basketButton">В корзину</a>
+                  ';
          ?>
    </div>
    <div class="header_info">
