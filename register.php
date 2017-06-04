@@ -25,7 +25,7 @@
 				file_put_contents('files/logins.txt', $login."\n", FILE_APPEND);
 				file_put_contents('files/passwords.txt', $password."\n", FILE_APPEND);
 				$_SESSION['login']=$login;
-				echo '<p align="center" style="font-size:24px;color:#fff;font-weight:bold;"> Вы успешно зарегистрированы!</p>';
+				echo '<p align="center" style="font-size:24px;color:#000;font-weight:bold;"> Вы успешно зарегистрированы!</p>';
 				?>
 		    </div>
                </div>
