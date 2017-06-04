@@ -16,19 +16,18 @@
                   <br>
                   <p align="center"><input style="height: 50px; width: 250px; font-size: 22px; cursor:pointer;" type="submit" value="Зарегистрироваться"></p>
                   <?php
-						if (isset($_SESSION['login'])) {
-							echo '<script>location.href="index.php"</script>';
-						}
-						else {
-							if(!empty($_SESSION['login_already_exist'])){
-								if ($_SESSION['login_already_exist']==true)
-								{
-									echo '<p align="center">Этот логин занят. Пожалуйста, введите другой логин.</p>';
-									$_SESSION['login_already_exist']=false;
-								}
-							}
-						}
-						?>
+			if (isset($_SESSION['login'])) {
+				echo '<script>location.href="index.php"</script>';
+			}
+			else {
+			if(!empty($_SESSION['login_already_exist'])){
+				if ($_SESSION['login_already_exist']==true){
+					echo '<p align="center">Этот логин занят. Пожалуйста, введите другой логин.</p>';
+					$_SESSION['login_already_exist']=false;
+					}
+				}
+			}
+			?>
                </div>
             </div>
          </div>
